@@ -1,0 +1,17 @@
+PREFIX ex: <http://diabetes.org/a#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT  ?Pregnancies ?Glucose ?BloodPressure ?SkinThickness ?Insulin ?BMI ?DiabetesPedigreeFunction ?Age ?Outcome
+WHERE { 
+   ?x rdf:type ex:sample .
+   ?x ex:Pregnancies ?Pregnancies .
+    ?x ex:Glucose ?Glucose .
+    ?x ex:BloodPressure ?BloodPressure .
+    ?x ex:SkinThickness ?SkinThickness .
+    ?x ex:Insulin ?Insulin .
+    ?x ex:BMI ?BMI .
+    ?x ex:DiabetesPedigreeFunction ?DiabetesPedigreeFunction .
+    ?x ex:Age ?Age .
+  ?x ex:Outcome ?Outcome .
+}
+order by ?x
